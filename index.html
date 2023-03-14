@@ -1,0 +1,174 @@
+<html lang="en">
+  <head>
+    <title>ja4</title>
+  </head>
+  <body>
+    <h1 style="color:red">Arrays</h1>
+    <h2>1.Find the Product.</h2>
+    <pre style="color:blue">
+    const Find_Prod = (array, N) => 
+    {
+        let ans= 1;
+        for(let index=0; index &lt N; index++){
+         ans= ans*array[index];
+        }
+        return ans;   
+    };
+    </pre>
+    <h2>2.Find the Sum.</h2>
+    <pre style="color:blue">
+       const Find_Sum = (array, N) => 
+        {
+          let ans= 0;
+          for(let index=0; index &lt N; index++){
+              ans= ans+array[index];
+            }
+           return ans;   
+        };
+    </pre>
+
+    <h2>3.Count Occurrences.</h2>
+    <pre style="color:blue">
+       const findCount = (N, K, Arr) => 
+       {
+         let ans = 0;
+         for(let index = 0; index &lt =N-1; index++){
+             if(Arr[index]===K){
+                 ans++;
+                }
+            }
+             return ans;
+        };
+    </pre>
+
+    <h2>4.Even Odd</h2>
+    <pre style="color:blue">
+       const findEvenOdd = (N, Arr) => 
+        {
+          let sumEven=0;
+          let sumOdd=0;
+          for(let i=0; i &lt N; i++){
+              if(Arr[i]%2===0){
+                 sumEven += Arr[i];
+                }
+                else{
+                  sumOdd += Arr[i];
+                }
+            }
+          return [sumEven , sumOdd];
+    
+        };
+    </pre>
+    <h2>5.Find whether the number is present or not</h2>
+    <pre style="color:blue">
+        const Find_Num = (array,N,M) => 
+        {
+          for(let index=0; index&ltN; index++){
+              if(M===array[index]){
+                   return "YES";
+                }
+            }
+           return "NO";
+        };
+    </pre>
+
+    <h2>6.Higher Age</h2>
+    <pre style="color:blue">
+        const highAge = (N, Arr) => 
+        {
+          let ans=[] ;
+          for(i=0; i<N; i++){
+             if(Arr[i]>17){
+                 ans.push(Arr[i]);
+                }
+            }
+          return(ans);
+        };
+    </pre>
+
+    <h2>7.Increment the Array Elements</h2>
+    <pre style="color:blue"> 
+        const Inc_Arr = (array,N) => 
+        {
+          const Ans = array.map(x => x + 1); 
+           console.log(Ans.join(" "));
+        };
+    </pre>
+    <h2>8.Pass or Fail</h2>
+    <pre style="color:blue">
+      const isAllPass = (N, Arr) => 
+      {
+        for(let i=0; i&ltN; i++ ){
+          if(Arr[i]&lt32){
+            return "NO";
+          }
+        }
+  
+       return "YES";
+      };
+    </pre>
+
+    <h2>9.Unique Color Shirt</h2>
+    <pre style="color:blue">
+        function Unique_Shirts (arr,N) {
+           let freq=[1001];
+   
+          for(let i=0; i&lt1001;i++){
+              freq[i]=0;
+            }
+          for(let i=0;i&ltN;i++){
+              freq[arr[i]]++;
+            }
+           let ans=0;
+            for(let i=0; i&lt1001; i++){
+               if(freq[i]===1){
+                  ans++;
+                }
+            }
+           return ans;
+        }
+    </pre>
+
+    <h2>10.Min and Max</h2>
+    <pre style="color:blue">
+        function arrayMin(arr) {
+         let min=arr[0];
+         for(let i=1; i &lt arr.length;i++){
+             if(arr[i]&ltmin){
+                  min=arr[i];
+                }
+            }
+             return min;
+        }
+
+        function arrayMax(arr) {
+         let max=arr[0];
+          for(let i=1; i&ltarr.length;
+              i++){
+             if(arr[i]&gtmax){
+                 max=arr[i];
+                }
+            }
+         return max;
+        }
+    </pre>
+    <h2>11.Birthday Game</h2>
+    <pre style="color:blue">
+      function Birthday_Game(arr,D ,M) {
+        let N=arr.length;
+        let count=0;
+       for(let i=0; i&ltN-M+1; i++){
+          let sum=0;
+    
+          for(let j=i; j&ltM+i; j++){
+            sum+=arr[j];
+          }
+          if(sum===D)
+          count++;
+
+        }
+        return count;
+      }
+    </pre>
+  </body>
+</html>
